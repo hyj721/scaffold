@@ -87,4 +87,15 @@ public class RbacMapperTest {
 
         System.out.println("完整RBAC数据插入测试通过！");
     }
+
+    /**
+     * 更新user信息
+     */
+    @Test
+    public void testUpdateUser() {
+        SysUser user = new SysUser();
+        user.setId(1L);
+        user.setNickname("李四");
+        sysUserMapper.updateById(user);
+    }
 }
